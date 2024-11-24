@@ -33,4 +33,4 @@ jobs:
     - if: matrix.runs-on == 'windows-latest' && github.ref != 'refs/heads/main' && !contains(github.ref, 'refs/tags/')
       run: ./build.ps1
     - if: (matrix.runs-on == 'windows-latest') && (github.ref == 'refs/heads/main' || contains(github.ref, 'refs/tags/'))
-        dotnet nuget push .\nuget\*.nupkg -s https://nuget.pkg.github.com/your-username/index.json -k ${{ secrets.GITHUB_TOKEN }}
+      run: dotnet nuget push .\nuget\*.nupkg -s https://nuget.pkg.github.com/your-username/index.json -k ${{ secrets.GITHUB_TOKEN }}
