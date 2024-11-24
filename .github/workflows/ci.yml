@@ -9,7 +9,7 @@ on:
   pull_request:
 env:
   DOTNET_NOLOGO: true
-premissions:
+permissions:
   packages: write
 
 jobs:
